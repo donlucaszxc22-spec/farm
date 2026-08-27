@@ -1,0 +1,86 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Service - AgriService Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <h1 class="logo">🌾 AgriService Hub</h1>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Book Service</a>
+                <a href="services.html">Services</a>
+                <a href="history.html">History</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container main-content">
+        <div class="card">
+            <h2 class="card-title">Schedule a Farm Service</h2>
+
+            <!-- Booking Form -->
+            <form id="bookingForm" class="form">
+                
+                <!-- Step 1: Select Service -->
+                <div class="form-group">
+                    <label for="serviceSelect">1. Select Farm Service</label>
+                    <select id="serviceSelect" required>
+                        <option value="" disabled selected>-- Choose a Service --</option>
+                        <option value="Tractor Tilling & Plowing">Tractor Tilling & Plowing ($120/acre)</option>
+                        <option value="Crop Spraying & Fertilizing">Crop Spraying & Fertilizing ($85/acre)</option>
+                        <option value="Soil Testing & Analysis">Soil Testing & Analysis ($50/sample)</option>
+                        <option value="Harvesting Assistance">Harvesting Assistance ($150/hour)</option>
+                        <option value="Agricultural Consultation">Agricultural Consultation ($90/hour)</option>
+                    </select>
+                </div>
+
+                <!-- Step 2: Date and Specific Time -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="serviceDate">2. Preferred Date</label>
+                        <input type="date" id="serviceDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="serviceTime">3. Preferred Specific Time</label>
+                        <!-- Changed from dropdown to an interactive time picker restricted to working hours -->
+                        <input type="time" id="serviceTime" min="07:00" max="17:00" required>
+                    </div>
+                </div>
+
+                <!-- Step 3: Farm & Contact Details -->
+                <div class="form-group">
+                    <label>4. Contact & Farm Information</label>
+                    <div class="form-row">
+                        <input type="text" id="fullName" placeholder="Full Name" required>
+                        <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+                    </div>
+                    <input type="email" id="emailAddress" placeholder="Email Address" required class="mt-3">
+                    <textarea id="farmLocation" placeholder="Farm Address / Location Details (e.g., Acreage, landmark)" rows="3" required class="mt-3"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Confirm & Schedule Service</button>
+            </form>
+
+            <!-- Success Confirmation Box -->
+            <div id="confirmationBox" class="confirmation-box hidden">
+                <div class="success-icon">✅</div>
+                <h3 class="success-title">Booking Confirmed Successfully!</h3>
+                <p class="success-text">Thank you, <span id="confName" class="font-bold"></span>. Your request for <span id="confService" class="font-bold"></span> is scheduled for <span id="confDate" class="font-bold"></span>.</p>
+                <div class="btn-row">
+                    <button type="button" onclick="resetForm()" class="btn-reset">Book Another</button>
+                    <a href="history.html" class="btn-history-link">View Booking History</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

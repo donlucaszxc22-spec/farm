@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking History - AgriService Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <h1 class="logo">🌾 AgriService Hub</h1>
+            <nav class="nav-links">
+                <a href="index.html">Book Service</a>
+                <a href="services.html">Services</a>
+                <a href="history.html" class="active">History</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.75rem; margin-bottom: 1.5rem;">
+                <h2 class="card-title" style="margin-bottom: 0; border-bottom: none; padding-bottom: 0;">Your Scheduled Bookings</h2>
+                <button id="clearHistoryBtn" onclick="clearHistory()" class="btn-clear hidden">Clear History</button>
+            </div>
+
+            <!-- History List container -->
+            <div id="historyContainer">
+                <!-- Dynamically loaded via script.js -->
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
