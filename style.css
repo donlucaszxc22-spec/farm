@@ -6,9 +6,9 @@
 }
 
 body {
-    /* Background featuring people harvesting together with a gentle, readable overlay */
-    background: linear-gradient(rgba(240, 253, 244, 0.88), rgba(220, 252, 231, 0.92)), 
-                url('https://www.vecteezy.com/vector-art/29242036-green-landscape-with-people-harvesting-together-happy-farming-and-agriculture-greenhouse-and-trees-vector-flat-illustration') no-repeat center center fixed;
+    /* Bright, lush greenery agriculture background with a soft readable overlay */
+    background: linear-gradient(rgba(240, 253, 244, 0.85), rgba(220, 252, 231, 0.90)), 
+                url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
     background-size: cover;
     color: #1e293b;
     line-height: 1.5;
